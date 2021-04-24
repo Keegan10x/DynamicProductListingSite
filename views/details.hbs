@@ -1,0 +1,59 @@
+
+<!doctype html>
+
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<title>Details</title>
+		<meta name="description" content="Page to display item details">
+		<meta name="author" content="Keegan">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<link href="{{host}}/style.css" type="text/css" rel="stylesheet" />
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/showdown/1.4.0/showdown.min.js"></script>
+		<script type="module" src="{{host}}/main.js"></script>
+	</head>
+	<header>
+		<h1>Item Details</h1>
+		<a href="/logout">Log out</a><a href="/home">Home page</a><a href="/new">Sell Item</a>
+	</header>
+	<body>	
+		{{#each items}}
+			<main>
+			<figure>
+				<figcaption>{{this.item_name}}</figcaption><hr>
+												
+				<img src ="/uploads/{{this.image}}"><hr>
+				
+				<figcaption>Asking Price: £{{this.price}}</figcaption>
+				
+			</figure>
+			</main>
+			<main>
+			<table border="1">
+			<tr>
+				<th>Username</th>
+				<th>Date</th>
+				<th>Email</th>
+				<th>Phone</th>
+			</tr>
+			<tr>
+				<td>{{this.user}}</td>
+				<td>{{this.date}}</td>
+				<td>{{this.email}}</td>
+				<td>{{this.tel}}</td>
+			</tr>
+			</table>
+			</main>
+		
+
+			<main>
+				<article>{{{this.description}}}</article>
+			</main>
+			
+		{{/each}}
+		
+	</body>
+	<footer>
+		<p>Sell your items today. Fast, Easy and Reliable.</p>
+	</footer>
+</html>

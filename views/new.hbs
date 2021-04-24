@@ -1,0 +1,71 @@
+
+<!doctype html>
+
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<title>new</title>
+		<meta name ="description" content="Form to add new items">
+		<meta name ="author" content="Keegan">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<link href="{{host}}/style.css" type="text/css" rel="stylesheet" />
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/showdown/1.4.0/showdown.min.js"></script>
+		<script type="module" src="tomarkdown.js"></script>
+		<script type="module" src="/main.js"></script>
+		
+		
+	</head>
+	<body>
+		<header>
+		<h1>Add New Item</h1>
+		<a href="/logout">Log out</a><a href="/home">Home page</a>
+		</header>
+		<main>
+			<form name=aItems action="/new" method="post" enctype="multipart/form-data">
+			<p>
+				<label for="name">Item Name</label><br />
+				<input type="text" name="name" placeholder="the item name" value="" required autofocus><hr>
+			</p>
+					
+			<p>
+				<input type="file" id="Item" name="Item" accept="image/*" required/>
+				<label for="Item"></label>
+				<img src="Items.png"/><hr>
+			</p>
+				
+			<p>
+				<label for="desc">Description</label><br />
+				<textarea name="desc" maxlength="2500"></textarea>
+				<label for="desc">Max Characters: 2500</label><br/><br/><hr>
+			</p>
+				
+			<!--    FALL BACK IF ALL ELSE FAILS.
+			<p>
+				<label for="price">Item Price</label><br />
+				<input type="number" name="price" placeholder="price in £" value="" min="0" max="250" width=200 required autofocus>
+			</p>    go through client sided javascript page 11
+			-->		
+				
+			<p>
+				<label for="price">Price £</label>
+				<output name="price_val">50</output>
+				<input type="range" name="price" value="50" min="0" max="250" /><br /><br /><hr>
+			</p>
+				<input type="text" name="html" id="html" hidden/>
+					
+			<p><input type="submit" value="Confirm" ></p>	
+			</form>
+		
+		</main>
+		<p></p>
+		<h2>Mark Down Render, What the buyer sees</h2>
+		<main>
+		<p>
+		<article></article>
+		</p>
+		</main>
+	</body>
+	<footer>
+		<p>Sell your items today. Fast, Easy and Reliable.</p>
+	</footer>
+</html>			
