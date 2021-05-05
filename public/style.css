@@ -1,0 +1,837 @@
+
+body {
+	font-family: Arial, Helvetica, sans-serif;
+	margin: auto;
+	padding-bottom: 200px;
+	display: grid;
+  	
+	
+}
+
+
+/* formats the red message boxes */
+aside {
+	max-width: 500px;
+	margin: auto;
+	background-color: yellow;
+}
+.msg {
+	border: 1px solid darkorange;
+	font-weight: bold;
+	background-color: white;
+	color: darkorange;
+	padding: 1em;
+	margin: 2em;
+	position: fixed;
+	top: 2em;
+	
+}
+
+header {
+	width: 100%;
+	background-color: #beede1;
+	border-bottom: 5px solid grey;
+	height: 9vw;
+	color : #444;
+	
+	
+}
+@media (max-width: 1000px){
+	header{
+		padding-bottom:2em;
+	}
+}
+@media (max-width: 800px){
+	header{
+		padding-bottom:2em;
+	}
+}
+
+@media (max-width: 600px){
+	header{
+		padding-bottom:2em;
+	}
+}
+
+@media (max-width: 400px){
+	header{
+		padding-bottom:2em;
+	}
+}
+
+h1, h2, h3, {
+	margin: 0;
+	padding: 0;
+	color: #444; 
+	
+}
+
+h1 {
+	padding: 2.6vw;
+	float: left;
+	font-size: 3vw;
+	margin-left: auto;
+}
+
+h2 {
+	font-size: 2.5vw;
+	margin: 1vw;
+	text-align: center;
+	
+}
+
+h3 {
+	font-size: 2vw;
+	margin: 1vw;
+	margin-left: 0.6vw;
+}
+
+
+
+header > img {
+	width: 7vw;
+	border-radius: 50%;
+	position: absolute;
+	left: 0.5vw;
+	top: 0.5vw;
+	
+}
+
+header > h1 {
+	margin-top: 0;
+	margin-left: 0;
+	float: left;
+	font-size: 3vw;
+	text-decoration: underline;
+	position: sticky;
+}
+
+p, legend {
+	font-size: 1.5vw;
+}
+
+
+article {
+	width: 50vw;
+	/* background-color: grey;
+	float: left; 
+	word-wrap: break-word*/
+	
+}
+
+aside {
+	/* background-color: yellow;
+	float: right; */
+	width: 50vw;
+}
+
+main a {
+	color: black;
+	text-decoration: underline;
+}
+
+
+main a:hover {
+	color: white;
+	text-decoration: none;
+}
+
+section {
+	background-color: #beede1;
+	width: 24vw;
+	margin-top: 1vw;
+	padding: 1vw;
+	border-radius: 1vw;
+}
+
+section > p {
+	margin: 0;
+	padding: 0;
+	margin-bottom: 0.5vw;
+}
+
+section > h3 {
+	margin: 0;
+	padding: 0;
+	font-size: 1.8vw;
+}
+
+small {
+	display: block;
+	text-align: right;
+}
+
+/* ===== FORMS ===== */
+
+fieldset {
+	position: relative;
+	width: 25vw;
+	border: 1px solid #CCC;
+	padding-top: 4vw;
+}
+
+legend {
+	position:absolute;
+  	top:0;
+	left:0;
+	width: 25.5vw;
+	background-color: #ccc;
+	border-bottom: 5px solid grey;
+	padding: 0.6vw;
+}
+
+input, textarea {
+	box-sizing: border-box;
+	border-radius: 0.7em;
+}
+
+input:focus {
+	outline:none;
+}
+
+/* input[type="file"] {
+	display: none;
+} */
+
+input[type="submit"], .button, header > a, body > a, .custom-file-upload {
+	
+	font-size: 1em;
+
+	border: solid gray;
+	color:black;
+	text-decoration: none;
+	display: inline-block;
+	font-weight: bold;
+	text-align: center;
+	background-color: white;
+	border-radius: 0.7em;
+	padding: 10px;	
+	
+	
+	
+	
+  /*background-color: #9c9c9c;
+  border: 2px solid gray;
+  color: white;
+  padding: 0.4vw 0.8vw;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+	font-size: 1.5vw;*/
+	/* border-radius: 0.6vw; */
+}
+
+input[type="submit"]:hover, header > a:hover, .custom-file-upload:hover, .add:hover {
+  color: #9c9c9c;
+  background-color: white;
+}
+
+input[type="text"], input[type="email"], input[type="password"], input[type="tel"], textarea, select {
+	font-size: 1.5vw;
+	width: 100%;
+	border: 1px solid #CCC;
+	padding: 0.5vw;
+	
+	/* margin-bottom: 1vw; */
+	/* border-radius: 0.6vw; */
+}
+
+textarea {
+	height: 10vw;
+	resize: none;
+}
+
+input:required, textarea:required {
+	border-width: 2px;
+}
+
+input:invalid, textarea:invalid {
+	border-color: darkorange;
+}
+input:valid, textarea:valid {
+	border-color: darkgreen;
+}
+
+
+select {
+	width: 26.3vw;
+	-webkit-appearance: none;
+	-webkit-border-radius: 0px;
+}
+
+form > br {
+	line-height: 3vw;
+}
+
+
+
+dl {
+  width: 35vw;
+  overflow: hidden;
+  /* background: #ff0; */
+  padding: 0;
+	margin: 0;
+	font-size: 1.5vw;
+}
+
+dt {
+  float: left;
+  width: 10.5vw;
+  /* adjust the width; make sure the total of both is 100% */
+  /* background: #cc0; */
+  padding: 0.5vw;
+  margin: 0
+}
+
+dd {
+  float: left;
+  width: 21vw;
+  /* adjust the width; make sure the total of both is 100% */
+	/* background: #dd0; */
+	padding: 0.5vw;
+  margin: 0
+}
+
+/* ===== TABLES ===== */
+
+
+table img {
+	width: 100px;
+}
+
+tr:nth-child(odd) {
+	background: #DDD;
+}
+
+td, th {
+	/* border: 1px solid grey; */
+	padding: 0.5vw;
+	font-size: 1.5vw;
+	text-align: left;
+}
+
+td:last-child, th:last-child {
+	text-align: right;
+}
+
+/* ===== ADD BUTTON ===== */
+
+button#add {
+	display: block;
+	position: fixed;
+	bottom: 1em;
+	right: 1em;
+	z-index: 5;
+	background-color: #9c9c9c;
+	color: #9c9c9c;
+	font-size: 5em;
+
+	block-size: border-box;
+	border-radius: 2em;
+	border: none;
+	cursor: pointer;
+	
+}
+
+.add {
+	display: block;
+	position: fixed;
+	bottom: 1em;
+	right: 1em;
+	z-index: 5;
+	padding: 1em;
+}
+
+button#add:hover {
+	background-color: white;
+	color: #9c9c9c;
+	
+}
+
+footer {
+  position: fixed;
+  height: 3.8vw;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  padding: 0.3em;
+  border-top: 5px solid grey;
+  font-weight: bold;
+  background-color: #beede1;
+  color: #444;
+  text-decoration: underline;
+  font-size: 1.5vw;
+  font-style: italic;
+}
+
+@media (max-width:500px){
+	footer {
+		font-size: 2.8vw;
+		height: 10vw;
+	}
+}
+
+
+figure {
+  position: auto;
+  margin: 1em;
+  padding: 0;
+  width: 300px;
+  object-fit: cover;
+  border-radius: 1em;
+  overflow: hidden;
+  box-shadow: 3px 3px 22px -7px rgba(0,0,0,0.75);
+  background-color: lightgray;
+}
+
+@media (max-width: 400px){
+	figure{
+		max-width: 90%;
+	}
+}
+
+
+
+section {
+	background-color: lightgray;
+}
+
+figcaption {
+  font-size: 2em;
+  text-align: center;
+  font-family: Helvetica;
+  padding-bottom: 0.3em;
+  padding-top: 0.3em;
+  margin-bottom: 10px;
+  
+}
+
+img {
+  width: 100%;
+  object-fit: contain;
+  height: 170px;
+}
+
+main {	
+	max-width: 1200px;
+	margin: auto;
+	margin-top: 2em;
+	padding: 2em;
+	box-sizing: border-box;
+	background-color: #beede1;
+	display: flex;
+  	flex-wrap: wrap;
+	justify-content: space-around;
+	border-radius: 1em;
+	word-wrap: break-word
+}
+
+@media (max-width: 1200px){
+	main{
+		max-width: 85%;
+	}
+}
+
+@media (max-width: 800px){
+	main{
+		max-width: 85%;
+	}
+}
+
+@media (max-width: 600px){
+	main{
+		max-width: 85%;;
+	}
+}
+
+@media (max-width: 400px){
+	main{
+		max-width: 85%;
+	}
+}
+
+
+
+table, th, td {
+  border: 1px solid black;
+  border-collapse: collapse;
+  text-align: center;
+  margin: auto;
+  font-size: 1em;
+  font-weight: bold;
+  
+}
+
+@media (min-width: 1200px){
+	table, th, td {
+	border: 1px solid black;
+	border-collapse: collapse;
+	text-align: center;
+	margin: auto;
+	font-size: 1.5em;
+        font-weight: bold;
+	}
+}
+
+
+
+
+section{
+	margin: 0;
+	padding: 1.5em;
+}
+
+
+hr{
+	border-top: 4px solid #9c9c9c;
+	border-radius: 5px;
+	
+	
+}
+
+
+/* Buttons in the headder */
+header > a {
+	/*
+	width: 80px;
+	height: 34px;
+	border-radius: 0.7em;
+	font-size: 1.5em;
+	margin-top: 3vw;
+	margin-right: 2.5vw;
+	
+	float: right;
+	font-size: 1.3vw;
+	position: sticky;
+	align-items: center;*/	
+
+	font-size: 1em;
+	margin-top: 3vw;
+	margin-right: 1.6vw;
+	
+	float: right;
+	
+	color:black;
+	text-decoration: none;
+	
+	font-weight: bold;
+	
+	background-color: white;
+	border-radius: 0.7em;
+	
+	padding: 10px;
+	
+	align-items: center;
+	
+	border: solid gray;
+	
+}
+
+	
+
+
+figcaption > a{
+	width: 100%;
+  	height: 100%;
+	
+	color:black;
+	text-decoration: none;
+	
+	font-weight: bold;
+	
+	background-color: white;
+	border-radius: 0.7em;
+	
+	padding: 10px;
+	
+	align-items: center;
+	
+	border: solid gray;
+	
+}
+
+main a:hover {
+	color: lightgray;
+	text-decoration: none;
+}
+
+
+input[type=number]{
+	width: 100%;
+	padding: 0.3em;
+	height: 60px;
+	border-radius: 1em;
+	font-size: 1.5vw;
+}
+
+input[type=text], textarea {
+	width: 100%;
+	padding: 0.5em;
+	box-sizing: border-box;  
+}
+
+
+@media (max-width:500px){
+	textarea {
+		height:200px;
+		font-size: 1.5em;
+		
+	}
+}
+
+@media (max-width:500px){
+	input[type=text]{
+		height:35px;
+		font-size: 1.5em;
+	}
+}
+
+@media (max-width:500px){
+	input[type=submit]{
+		height:35px;
+		font-size: 1.5em;
+	}
+}
+
+
+
+
+/* slider graphics */
+
+input[type=range] {
+  width: 100%;
+  margin: 14px 0;
+  background-color: transparent;
+  -webkit-appearance: none;
+}
+
+input[type=range]::-webkit-slider-runnable-track {
+  background: #9c9c9c;
+  border: 0.2px solid #010101;
+  border-radius: 1em;
+  width: 100%;
+  height: 1.55em;
+  cursor: pointer;
+}
+input[type=range]::-webkit-slider-thumb {
+  margin-top: -9px;
+  width: 37.2px;
+  height: 37.2px;
+  background: #beede1;
+  border: 1.55px solid black;
+  border-radius: 20px;
+  cursor: pointer;
+  -webkit-appearance: none;
+}
+
+main > article{
+	font-size: 1.5vw;
+}
+
+@media (max-width:500px){
+	main > article, h1, p, ol{
+		font-size: 3.3vw;
+		
+	}
+}
+
+/* sell page mobile css */
+@media (max-width:500px){
+	header > h1 {
+		font-size: 0.85em;
+		
+	}
+}
+
+@media (max-width:500px){
+	label{
+		font-size: 1.3em;
+		
+	}
+}
+
+@media (max-width:500px){
+	input[type=submit]{
+		font-size: 1.3em;
+		text-align: center;
+		padding-top:3px;
+		padding-bottom:15px;
+		
+	}
+}
+
+
+@media (max-width:500px){
+	input[type=password]{
+		height:35px;
+		font-size: 1.5em;
+		padding: 0.5em;
+		
+	}
+}
+
+@media (max-width:500px){
+	input[type=tel]{
+		height:35px;
+		font-size: 1.5em;
+		padding: 0.5em;
+		
+	}
+}
+
+@media (max-width:500px){
+	input[type=email]{
+		height:35px;
+		font-size: 1.5em;
+		padding: 0.5em;
+		
+	}
+}
+
+@media (min-width:1200px){
+	header > a{
+		font-size: 2em;
+		
+	}
+}
+
+
+
+
+
+
+
+
+
+/* 501px to 900px display */
+
+@media (min-width:501px) and (max-width:900px){
+	main{
+		width: 75%;
+		
+	}
+}
+
+@media (min-width:501px) and (max-width:900px){
+	label{
+		font-size: 1em;
+		
+	}
+}
+
+@media (min-width:501px) and (max-width:900px){
+	input[type=tel],input[type=email], input[type=text], input[type=password],input[type=number]{,
+		width:100%;
+		height:50px;
+		font-size: 1em;
+		padding: 0.5em;
+		
+	}
+}
+
+
+@media (min-width:501px) and (max-width:900px){
+	input[type=submit]{
+		font-size: 0.8em;
+		text-align: center;
+		padding-top:7px;
+		padding-bottom:7px;
+		
+	}
+}
+
+@media (min-width:501px) and (max-width:900px){
+	textarea{
+		height:200px;
+		font-size: 0.8em;
+		
+	}
+}
+
+
+@media (min-width:501px) and (max-width:900px){
+	main > article, h1, p, ol{
+		font-size: 3vw;
+		
+	}
+}
+
+
+
+@media (min-width:670px) and (max-width:900px){
+	table, th, td {
+	border: 1px solid black;
+	border-collapse: collapse;
+	text-align: center;
+	margin: auto;
+	font-size: 1.2em;
+        font-weight: bold;
+	}
+}
+
+@media (min-width:501px) and (max-width:669px){
+	table, th, td {
+	border: 1px solid black;
+	border-collapse: collapse;
+	text-align: center;
+	margin: auto;
+	font-size: 1em;
+        font-weight: bold;
+	}
+}
+
+@media (min-width:501px) and (max-width:900px){
+	footer {
+		font-size: 2.8vw;
+		height: 8vw;
+	}
+}
+
+
+/* iphone 5/SE UI */
+
+@media (min-width:100px) and (max-width:350px){
+	main {
+		width:85%;
+	
+	}
+}
+
+@media (min-width:100px) and (max-width:350px){
+	main > article, h1, p, ol{
+		font-size: 95%;
+		
+	}
+}
+
+@media (min-width:100px) and (max-width:350px){
+	header > h1{
+		font-size: 85%;
+		font-weight: bold;
+	}
+}
+
+@media (min-width:100px) and (max-width:350px){
+	footer{
+		font-size: 0.8em;
+		
+	}
+}
+
+@media (min-width:100px) and (max-width:350px){
+	header > a{
+		width: 50px;
+		height: 20px;
+		font-size: 0.85em;
+		padding-top:5px;
+		padding-bottom:15px;
+		align-content:center;
+		
+	}
+}
+
+@media (min-width:100px) and (max-width:350px){
+	header > h1{
+		font-size:1em;
+	}	
+}

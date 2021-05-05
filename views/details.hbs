@@ -1,0 +1,115 @@
+
+<!doctype html>
+
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<title>Details</title>
+		<meta name="description" content="Page to display item details">
+		<meta name="author" content="Keegan">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<link href="{{host}}/style.css" type="text/css" rel="stylesheet" />
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/showdown/1.4.0/showdown.min.js"></script>
+		<script type="module" src="{{host}}/main.js"></script>
+		<script type="module" src="/helper.js"></script>
+	</head>
+	<header>
+		<h1>Item Details</h1>
+		<a href="/logout">Log out</a><a href="/home">Home page</a><a href="/new">Sell Item</a>
+	</header>
+	<body>	
+		{{#each items}}
+			<main>
+			<figure>
+				<figcaption>{{this.item_name}}</figcaption><hr>
+												
+				<img src ="/uploads/{{this.image}}"><hr>
+				
+				<figcaption>Asking Price: £{{this.price}}</figcaption>
+				
+			</figure>
+			</main>
+			<main>
+			<table border="1">
+			<tr>
+				<th>Username</th>
+				<th>Date</th>
+				<th>Email</th>
+				<th>Phone</th>
+			</tr>
+			<tr>
+				<td>{{this.user}}</td>
+				<td>{{this.date}}</td>
+				<td>{{this.email}}</td>
+				<td>{{this.tel}}</td>
+			</tr>
+			</table>
+			</main>
+
+			<main>
+				<article>{{{this.description}}}</article>
+			</main>
+			
+		{{/each}}
+		
+		{{#if anotherPerson}}
+		
+		{{#if hasOffered}}
+		{{#each items}}<main><h3>You have already made {{this.user}} an offer, you can update your offer.</h3></main>{{/each}}
+		
+		<main>
+		<!-- this form for updating offers -->
+		<form name=makeOffer action="/details" method="post" enctype="multipart/form-data">
+			{{#each items}}
+			<p>
+			<label for="offer">Your Offer £<output name="offer_val">10</output></label>
+			<input type="range" name="offer" value="10" min="0" max="{{this.price}}" /><br />
+			</p>
+			
+			<!-- is this a new offer, NO -->
+			<p><input type="number" name="new" id="new" value="0" hidden/></p>
+			
+			<p><input type="number" name="buyerid" id="buyerid" value="{{this.buyerid}}" hidden/></p>
+			
+			<p><input type="number" name="itemid" id="itemid" value="{{this.item_id}}" hidden/></p>
+			
+			<p><input type="submit" value="Update Offer"></p>
+			{{/each}}
+		</form>
+		
+		</main>
+		
+		
+		{{else}}
+		<main>
+		{{#each items}}
+		<section>
+			<figcaption>Make {{this.user}} an offer</figcaption>
+			<!-- this form for making a new offer -->
+			<form name=makeOffer action="/details" method="post" enctype="multipart/form-data">
+			
+			<p>
+			<label for="offer">Your Offer £<output name="offer_val">10</output></label>
+			<input type="range" name="offer" value="10" min="0" max="{{this.price}}" /><br />
+			</p>
+				
+			<!-- is this a new offer, YES -->
+			<p><input type="number" name="new" id="new" value="1" hidden/></p>
+				
+			<p><input type="number" name="buyerid" id="buyerid" value="{{this.buyerid}}" hidden/></p>
+				
+			<p><input type="number" name="itemid" id="itemid" value="{{this.item_id}}" hidden/></p>
+					
+			<p><input type="submit" value="Make Offer"></p>	
+			</form>
+		</section>
+		{{/each}}
+		</main>
+		{{/if}}
+		{{/if}}
+		
+	</body>
+	<footer>
+		<p>Sell your items today. Fast, Easy and Reliable.</p>
+	</footer>
+</html>

@@ -1,0 +1,55 @@
+
+<!doctype html>
+
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<title>Create an Account</title>
+		<meta name="description" content="form to add new books">
+		<meta name="author" content="Keegan">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<link href="{{host}}/style.css" type="text/css" rel="stylesheet" />
+		<script type="module" src="{{host}}/main.js"></script>
+	</head>
+	<body>
+		<header>
+		<h1>Create an Account</h1>
+		<a href="/login">Log in</a><a href="/">Home page</a>
+		</header>
+		{{#if msg}}
+ 			<aside>
+				<p class="msg">{{msg}}</p>
+			</aside>
+		{{/if}}
+		<main>
+		<form action="/register" method="post">
+			<p>
+				<label for="user">Username</label><br />
+				<input type="text" name="user" placeholder="preferred username" value="{{body.user}}" required>
+			</p>
+			<p>
+				<label for="pass">Password</label><br />
+				<input type="password" name="pass" placeholder="preferred password" required>
+			</p>
+			<p>
+				<label for="pass2">Password (again)</label><br />
+				<input type="password" name="pass2" placeholder="re-enter password" required>
+			</p>
+			<p>
+				<label for="phone">Enter a phone number:</label><br />
+				<input type="tel" name="phone" placeholder="phone number" required>
+			<p>
+				<label for="email">Enter an email address:</label><br />
+				<input type="email" name="email" placeholder="you@email.com" required>
+			</p>
+			
+			
+			
+			<p><input type="submit" value="Create"></p>
+		</form>
+		</main>
+	</body>
+	<footer>
+		<p>Sell your items today. Fast, Easy and Reliable.</p>
+	</footer>
+</html>
